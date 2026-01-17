@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "ActiveCampaign CRM Extractor",
+  "version": "1.0",
+  "description": "Extract Contacts, Deals, and Tasks from ActiveCampaign CRM",
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+
+  "host_permissions": [
+    "*://*.activehosted.com/*"
+  ],
+
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.activehosted.com/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

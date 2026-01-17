@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        width: 300px;
+        padding: 12px;
+      }
+
+      button {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .contact {
+        border-bottom: 1px solid #e0e0e0;
+        padding: 6px 0;
+        font-size: 13px;
+      }
+
+      .name {
+        font-weight: bold;
+      }
+
+      .email {
+        color: #555;
+        font-size: 12px;
+      }
+
+      .phone {
+        color: #777;
+        font-size: 12px;
+      }
+
+      .empty {
+        color: #999;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>ActiveCampaign Extractor</h3>
+    <button id="extract">Extract Now</button>
+
+    <div id="output" class="empty">No data yet</div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
